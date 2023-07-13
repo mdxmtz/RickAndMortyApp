@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp"
+    tools:context=".recycler.ui.RecyclerFragment"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/item_recycler_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tv_item_recycler_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="TextView"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_recycler_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nombre de usuario" />
+
+        <TextView
+            android:id="@+id/tv_item_recycler_type"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Tipo"
+            android:textColor="#FA2A2A"
+            android:textSize="14dp"
+            android:textStyle="italic"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_recycler_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_recycler_name"
+            tools:text="Tipo de personaje" />
+
+        <TextView
+            android:id="@+id/tv_item_recycler_address_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:maxLines="1"
+            android:text="Origen"
+            android:textSize="16dp"
+            android:textStyle="italic"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_recycler_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_recycler_type" />
+
+
+        <TextView
+            android:id="@+id/tv_item_recycler_address_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="Direccion"
+            android:textColor="#3F51B5"
+            android:textSize="16dp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintStart_toEndOf="@+id/item_recycler_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_recycler_address_title"
+            tools:text="Direccion de usuario" />
+
+        <Button
+            android:id="@+id/btn_item_recycler_detail"
+            android:layout_width="73dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#3F51B5"
+            android:text="Ir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_recycler_address_value" />
+
+        <Button
+            android:id="@+id/btn_item_recycler_sheet"
+            android:layout_width="73dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#8BC34A"
+            android:text="Ver"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_recycler_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_recycler_address_value" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

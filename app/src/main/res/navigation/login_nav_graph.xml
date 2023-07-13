@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/recycleFragment"
+        android:name="com.example.miprimeraplicacion.recycler.ui.RecyclerFragment"
+        android:label="fragment_recycle"
+        tools:layout="@layout/fragment_recycle" >
+        <action
+            android:id="@+id/action_recycleFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+        <action
+            android:id="@+id/action_recycleFragment_to_characterFragment"
+            app:destination="@id/characterFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.miprimeraplicacion.login.ui.bottom_sheet.DetailBottomSheetDialogFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.miprimeraplicacion.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash"
+        android:label="SplashFragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_recycleFragment"
+            app:destination="@id/recycleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterFragment"
+        android:name="com.example.miprimeraplicacion.characterinfo.CharacterFragment"
+        android:label="CharacterFragment"
+        tools:layout="@layout/fragment_character"
+        />
+</navigation>
