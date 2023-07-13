@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:elevation="8dp"
+    android:background="@color/white"
     app:cardCornerRadius="8dp"
     tools:context=".recycler.ui.RecyclerFragment"
 
@@ -13,7 +14,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
 
         <ImageView
             android:id="@+id/item_recycler_image"
@@ -29,10 +32,12 @@
             android:id="@+id/tv_item_recycler_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:maxLines="1"
             android:text="TextView"
             android:textSize="18dp"
             android:textStyle="bold"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/item_recycler_image"
             app:layout_constraintTop_toTopOf="parent"
